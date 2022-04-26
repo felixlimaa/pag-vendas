@@ -6,6 +6,7 @@
     --cor5: #db531a;
     --cor6: black;
     --cor7: #FA0000;
+    --cor8: #f84444;
     --pA: 1.618;
     --pAd2: calc(var(--pA) / 2);
     --wid100: 100%;
@@ -313,8 +314,7 @@ header{
 
 /*Conteúdo de soluções*/
 .bloco-solucoes{
-    padding-top: calc(var(--espaco) * var(--pAd2));
-    padding-bottom: calc(var(--espaco) * var(--pAd2) + 86px);
+    padding: calc(var(--espaco) * var(--pAd2));
     background: var(--cor6);
     display: flex;
     flex-direction: row;
@@ -336,9 +336,25 @@ header{
     color:var(--cor4);
 }
 
+/*Alerta vermelho*/
+@keyframes alerta-verm {
+    0%, 100%{
+        opacity: 0.25;
+        color:var(--cor8);
+        transition: 0.75s;
+    }
+
+    15%{
+        opacity:1;
+        color:var(--cor7);
+        transition: 0.75s;
+    }
+}
+
 /*Fonte vermelha no Título*/
 .solucao-vermelha{
     color:var(--cor7);
+    animation: alerta-verm 1.5s infinite;
 }
 
 /*Parágrafo contendo cada Solucão*/
@@ -349,16 +365,38 @@ header{
     color:var(--cor2);
 }
 
+/*Fundo vermelho piscante*/
+@keyframes bg-piscante {
+    0%, 100%{
+        color:var(--cor2);
+        opacity: 0.25;
+        background-color:var(--cor8);
+        transition: 0.75s;
+    }
+
+    15%{
+        color:var(--cor2);
+        opacity: 1;
+        background-color:var(--cor7);
+        transition: 0.75s;
+    }
+}
+
 /*Pergunta destacada pela própria Alanis*/
 .pergunta-solucao{
     background-color: var(--cor7);
-    color:var(--cor2);
+    font-size: var(--maiorTexto);
+    animation: bg-piscante 1.5s infinite;
 }
 
 .boletos-expirados-desktop{
     width: calc(var(--wid100) / var(--pA));
-    margin: var(--espaco) 0;
-    
+    margin: var(--espaco) 0;   
+}
+
+.solucao-vermelha-paragrafo{
+    font-size: var(--maiorTexto);
+    animation: alerta-verm 1.5s infinite;
 }
 
 
