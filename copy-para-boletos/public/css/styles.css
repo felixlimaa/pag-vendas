@@ -60,6 +60,7 @@ header{
     background-color: var(--cor1);
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: row;
 }
 
@@ -149,7 +150,7 @@ header{
 
 .botao-flutuante-whatsapp:hover{
     transition: 2.5s;
-    animation: bot-whats 3.5s steps(30) infinite;
+    animation: bot-whats 5.5s steps(30) infinite;
     cursor: pointer;
 }
 
@@ -306,13 +307,13 @@ header{
     width: 100%;
     height: auto;
     margin-top: var(--espacoNeg);
-    margin-bottom: -5px;
+    margin-bottom: -0.1%;
 }
 
 /*Conteúdo de objeções*/
 .bloco-objecoes{
     padding-top: calc(var(--espaco) * var(--pAd2));
-    padding-bottom: calc(var(--espaco) * var(--pAd2) + 86px);
+    padding-bottom: calc(var(--espaco) * var(--pAd2) + 5%);
     background-color: var(--cor2);
     display: flex;
     flex-direction: row;
@@ -350,11 +351,9 @@ header{
 
 /*Objeto rasgado separador*/
 .papel-rasgado{
-    width: 100%;
-    height: auto;
-    margin-top: var(--espacoNeg);
-    margin-top:-84px;
-    margin-bottom: -5px;
+    width: 100% auto;
+    margin-top: -10%;
+    margin-bottom: -1%;
 }
 
 /*Área de Soluções*/
@@ -367,7 +366,7 @@ header{
 /*Conteúdo de soluções*/
 .bloco-solucoes{
     padding-top: calc(var(--espaco) * var(--pAd2));
-    padding-bottom: 110px;
+    padding-bottom: 8%;
     background-color: var(--cor6);
     display: flex;
     flex-direction: row;
@@ -458,9 +457,8 @@ header{
 /*Triângulo de borda*/
 .triangulo2{
     width: 100%;
-    height: auto;
-    margin-top: -97px;
-    margin-bottom: -1px;
+    margin-top: -7.5%;
+    margin-bottom: -1%;
 }
 
 /*Área do primeiro CTA*/
@@ -519,8 +517,8 @@ header{
 .whats01{
     position: absolute;
     justify-content: center;
-    left: 25px;
-    width: 200px;
+    left: 1.83%;
+    width: 14%;
     background-color: var(--cor2);
 }
 
@@ -528,9 +526,9 @@ header{
 .whats02{
     position: absolute;
     justify-content: center;
-    padding-top:500px;
-    right: 1px;
-    width: 250px;
+    padding-top:36.6%;
+    right: 0.07%;
+    width: 18.3%;
 }
 
 /*Conteúdo de segredos*/
@@ -591,7 +589,7 @@ header{
 /*Bloco de cada item do produto*/
 .bloco-sobre-produto{
     width: calc(var(--wid100) / 4);
-    margin: 10px;
+    margin: 0.73%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -637,7 +635,7 @@ header{
 /*Área de Bonus*/
 .area-bonus{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
@@ -694,13 +692,12 @@ header{
 /*Imagem do ebook bonus*/
 .mockup-ebook-bonus{
     width: calc(var(--wid100) / var(--pA) / var(--pA) / var(--pA));
-    height: auto;   
+    height: auto;
 }
 
 /*Bloco de detalhes sobre o item de bonus*/
 .detalhes-bonus{
     width: calc(var(--wid100) / var(--pA) / var(--pA));
-    height: auto;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -728,7 +725,6 @@ header{
     flex-direction: row;
     white-space: nowrap;
     overflow: hidden;
-    letter-spacing: 0.15em;
     margin: 0 auto;
     animation: escrevendo 3.5s steps(40, end) infinite;
 }
@@ -753,7 +749,7 @@ header{
 
 /*Título da Área de segredo*/
 .titulo-hora-de-agir{
-    padding:var(--espaco);
+    padding:var(--espaco) 0;
     width: calc(var(--wid100) / var(--pA));
     font-size: var(--maiorTexto);
     color:var(--cor1);
@@ -763,11 +759,11 @@ header{
 /*Parágrafo contendo cada segredo*/
 .paragrafo-hora-de-agir{
     padding: var(--espacoParagrafo);
-    width: calc(var(--wid100) / var(--pA));
+    width: calc(var(--wid100) * var(--pA));
     font-size: var(--paragrafo);
     color:var(--cor1);
     font-weight: 100;
-    text-align: left !important;
+    text-align: center;
 }
 
 /*Parágrafo de segredo em negrito*/
@@ -779,12 +775,12 @@ header{
 @keyframes fonte-expandindo {
     0%, 100% {
         color: var(--cor8);
-        scale: 100%;
+        scale: 75%;
     }
 
     50% {
         color: var(--cor7);
-        scale: 150%;
+        scale: 100%;
         transition: 2.5s;
     }
 }
@@ -865,13 +861,13 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: center;
-
 }
 
 /*Imagem dos ebooks*/
 .mockup-todos-ebooks{
     width: calc(var(--wid100) / var(--pA) / var(--pA) / var(--pA));
     height: auto;
+    align-items: center;
 }
 
 /*Sinal de + como divisor dos ebooks*/
@@ -881,12 +877,6 @@ header{
     justify-content: center;
     font-size: var(--maiorTexto);
 }
-
-
-
-
-
-
 
 /*Revelação do preço total do produto*/
 .precificacao{
@@ -958,7 +948,7 @@ header{
 .triangulo3{
     width: 100%;
     height: auto;
-    margin-bottom: -5px;
+    margin-bottom: -0.36%;
 }
 
 /*Área do segredo*/
@@ -985,7 +975,6 @@ header{
     font-size: var(--maiorTexto);
     text-align: center;
     color:var(--cor2);
-    white-space: nowrap;
     background-color: var(--cor1);
 }
 
@@ -1044,7 +1033,6 @@ header{
     font-size: var(--maiorTexto);
     text-align: center;
     color:var(--cor3);
-    white-space: nowrap;
 }
 
 /*Parágrafo contendo cada risco*/
@@ -1120,4 +1108,269 @@ footer{
     color: var(--cor2);
     text-align: center;
     padding: var(--paragrafo);
+}
+
+@media screen and (max-width: 939px){
+
+    
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Celulares*/
+@media screen and (max-width: 554px) {
+    
+    :root{
+        --pA: 1.618;
+        --pAd2: calc(var(--pA) / 2);
+        --wid100: 100%;
+        --espaco: 14px;
+        --espacoParagrafo: var(--espaco) 0;
+        --espacoNeg: -20px;
+        --maiorTexto: 20px;
+        --medioTexto: calc(var(--maiorTexto) * var(--pAd2));
+        --paragrafo: 14px;
+        --elePos: 0 calc(-69px / var(--pA));
+        --bordas: 100%;
+        --vetor: 50px;
+    }
+
+    /*Bloco da Promessa*/
+    .bloco-promessa{
+        flex-direction: column;
+    }
+
+    /*Promessa do produto*/
+    .promessa{
+        width: var(--wid100);
+        font-size: var(--maiorTexto);
+        color:var(--cor2);
+    }
+
+    /*Botão flutuante do WhatsApp*/
+    .botao-flutuante-whatsapp{
+        position: fixed;
+        width: calc(var(--wid100) / var(--pA) / var(--pA) / var(--pA) * var(--pAd2));
+        animation: giro-whats 25s steps(600) infinite, bot-whats 5.5s steps(30) infinite;
+    }
+
+    /*Demonstração do ebook + CTA*/
+    .ebook-copy-para-boletos{
+        padding: var(--espaco);
+        width: var(--wid100);
+    }
+
+    /*Imagem do ebook principal*/
+    .mockup-ebook{
+        width: calc(var(--wid100) / var(--pA));
+    }
+
+    /*Botão de compra da página*/
+    .botao-comprar{
+        width: calc(var(--wid100) / var(--pA));
+        margin: var(--espaco);
+        padding: var(--espaco);
+        color: var(--cor2);
+    }
+
+    /*Aviso da promessa*/
+    .aviso-promessa{
+        width: var(--wid100);
+        font-size: var(--maiorTexto);
+        color:var(--cor1);
+    }
+
+    /*Todos os títulos*/
+    .objecoes-pergunta, .solucao-titulo, .titulo-cta, .titulo-sobre-produto, .titulo-bonus, .titulo-hora-de-agir, .titulo-acabando-com-a-dor, .intro-preco-do-produto{
+        padding:var(--espaco);
+        max-width: var(--wid100);
+        font-size: var(--maiorTexto);
+        color:var(--cor1);
+        text-align: center;
+    }
+    
+    .solucao-titulo{
+        color:var(--cor2);
+    }
+    
+    /*Título da Área de segredo*/
+    .titulo-pegadinha{
+        width: calc(var(--wid100) * var(--pAd2));
+    }
+
+    /*Título da Área de risco*/
+    .titulo-risco{
+        padding:var(--espaco);
+        width: calc(var(--wid100) * var(--pAd2));
+        font-size: var(--maiorTexto);
+        text-align: center;
+        color:var(--cor3);
+    }
+
+    /*Todos os parágrafos*/
+    .objecao, .solucao, .segredo, .bonus-paragrafo, .paragrafo-hora-de-agir, .paragrafo-acabando-com-a-dor, .pegadinha{
+        padding: var(--espacoParagrafo);
+        min-width: calc(var(--wid100) * var(--pAd2));
+        font-size: var(--paragrafo);
+        color:var(--cor1);
+    }
+
+    .solucao{
+        color: var(--cor2);
+    }
+
+    /*Conteúdo de objeções*/
+    .bloco-objecoes{
+        padding-top: calc(var(--espaco) * var(--pAd2));
+        padding-bottom: calc(var(--espaco) * var(--pAd2) + 10%);
+        margin-bottom: -5%;
+        background-color: var(--cor2);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /*Objeto rasgado separador*/
+    .papel-rasgado{
+        width: 100%;
+    }
+
+    /*Print dos boletos expirados*/
+    .boletos-expirados-desktop{
+        width: var(--wid100);
+        margin: var(--espaco) 0;
+    }
+
+    /*Área sobre o produto*/
+    .sobre-produto{
+        display: flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        padding: calc(var(--espaco) * var(--pAd2));
+        justify-content: center;
+    }
+
+    /*Área de Bonus*/
+    .area-bonus{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    /*Conteúdo de Bonus*/
+    .bloco-bonus{
+        padding: calc(var(--espaco) * var(--pAd2));
+        background-color: var(--cor2);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /*Bloco de cada item do produto*/
+    .bloco-sobre-produto{
+        width: var(--wid100);
+        margin: 0.73%;
+    }
+
+    /*Bloco do ebook*/
+    .bloco-ebook-bonus{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*Parágrafo sobre os bônus*/
+    .bonus-paragrafo{
+        padding: var(--espaco) 0 0 0;
+        width: var(--wid100);
+        font-size: var(--paragrafo);
+        color:var(--cor1);
+        font-weight: 100;
+    }
+
+    /*Imagem do ebook bonus*/
+    .mockup-ebook-bonus{
+        width: calc(var(--wid100) / var(--pA));
+    }
+
+    /*Bloco de detalhes sobre o item de bonus*/
+    .detalhes-bonus{
+        width: var(--wid100);
+    }
+
+    /*Imagem dos ebooks*/
+    .mockup-todos-ebooks{
+        width: calc(var(--wid100) / var(--pA));
+    }
+
+    /*Preço total do produto à vista*/
+    .preco-produto{
+        font-size: calc(var(--maiorTexto) * var(--pA) * var(--pA));
+        padding: var(--espaco) 0;
+        animation: botao-crescente 5.5s infinite;
+    }
+
+    /*Botão de compra da página*/
+    .botao-comprar2{
+        width: calc(var(--wid100) / var(--pA));
+        margin: var(--espaco);
+        padding: var(--espaco);
+        color: var(--cor2);
+    }
+
+    /*Compra segura*/
+    .compra-segura{
+        width: calc(var(--wid100) * var(--pAd2) * var(--pAd2) * var(--pAd2) * var(--pAd2));
+    }
+
+    /*Valor Total para Agir*/
+    .hora-de-agir-valor{
+        font-size: calc(var(--maiorTexto) * var(--pA));   
+    }
+
+    /*Parágrafo contendo cada segredo*/
+    .foco-cta{
+        padding: var(--espacoParagrafo);
+        width: calc(var(--wid100) * var(--pAd2));
+        font-size: var(--medioTexto);
+        color:var(--cor1);
+        text-align: center;
+    }
+
+    /*Rodapé do site*/
+    footer{
+        background-color: var(--cor6);
+        color: var(--cor2);
+        text-align: center;
+        padding: var(--paragrafo);
+        font-size: var(--paragrafo);
+    }
 }
