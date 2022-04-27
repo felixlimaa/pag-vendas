@@ -7,6 +7,7 @@
     --cor6: black;
     --cor7: #FA0000;
     --cor8: #f84444;
+    --cor9: #D6D6D6;
     --pA: 1.618;
     --pAd2: calc(var(--pA) / 2);
     --wid100: 100%;
@@ -100,6 +101,56 @@ header{
     border-bottom-left-radius: var(--bordas);
     border-bottom-right-radius: var(--bordas);
     background-color: var(--cor1);
+}
+
+/*Animação de escala do botão do WhatsApp*/
+@keyframes bot-whats{
+    0%,100%{
+        scale:100%;
+    }
+
+    50%{
+        scale:75%;
+    }
+}
+
+/*Animação de giro do botão do WhatsApp*/
+@keyframes giro-whats{
+    0%{
+        transform: rotate(0);
+    }
+
+    10%{
+        transform: rotate(90deg);
+    }
+
+    25%{
+        transform: rotate(45deg);
+    }
+
+    85%{
+        transform: rotate(180deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/*Botão flutuante do WhatsApp*/
+.botao-flutuante-whatsapp{
+    position: fixed;
+    width: calc(var(--wid100) / var(--pA) / var(--pA) / var(--pA) / var(--pA) / var(--pA));
+    right: var(--espaco);
+    bottom: var(--espaco);
+    transition: 2.5s;
+    animation: giro-whats 25s steps(600) infinite;
+}
+
+.botao-flutuante-whatsapp:hover{
+    transition: 2.5s;
+    animation: bot-whats 3.5s steps(30) infinite;
+    cursor: pointer;
 }
 
 /*Demonstração do ebook + CTA*/
@@ -814,6 +865,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: center;
+
 }
 
 /*Imagem dos ebooks*/
@@ -865,15 +917,9 @@ header{
     padding-bottom: var(--espaco);
 }
 
-
-
-
-
-
-/*Área do botão de compra*/
+/*Área do botão de compra isolada*/
 .area-botao-comprar{
-    padding: var(--espaco) 0;
-    width: var(--wid100);
+    padding-top: var(--espaco);
     text-align: center;
     justify-content: center;
     display: flex;
@@ -881,4 +927,197 @@ header{
     background-color: var(--cor2);
 }
 
+/*Bloco de botão de compra*/
+.bloco-botao-comprar2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: 1s;
+}
 
+/*Botão de compra com mouse em cima*/
+.botao-comprar2:hover{
+    animation: botao-crescente 5.5s infinite;
+}
+
+/*Botão de compra da página*/
+.botao-comprar2{
+    cursor: pointer;
+    width: calc(var(--wid100) / var(--pA) / var(--pA));
+    margin: var(--espaco) 0;
+    padding: var(--espaco) 0;
+    border:none;
+    color: var(--cor2);
+    background-color: var(--cor5);
+    font-size: var(--medioTexto);
+    font-weight: bold;
+    border-radius: var(--espaco);
+}
+
+/*Triângulo de borda*/
+.triangulo3{
+    width: 100%;
+    height: auto;
+    margin-bottom: -5px;
+}
+
+/*Área do segredo*/
+.area-pegadinha{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/*Conteúdo de segredos*/
+.bloco-pegadinha{
+    padding: var(--espaco) 0;
+    background-color: var(--cor9);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*Título da Área de segredo*/
+.titulo-pegadinha{
+    padding:var(--espaco);
+    width: calc(var(--wid100) / var(--pA));
+    font-size: var(--maiorTexto);
+    text-align: center;
+    color:var(--cor2);
+    white-space: nowrap;
+    background-color: var(--cor1);
+}
+
+/*Parágrafo contendo cada segredo*/
+.pegadinha{
+    padding: var(--espacoParagrafo);
+    width: calc(var(--wid100) / var(--pA));
+    font-size: var(--paragrafo);
+    color:var(--cor1);
+    font-weight: 100;   
+}
+
+/*Área do segredo*/
+.area-risco{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: var(--cor1);
+    background-image: url('../img/bg/bg-mobile.png');
+    width: var(--wid100);
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 10%;
+    background-size:cover;
+    background-blend-mode:exclusion;
+    justify-content: center;
+}
+
+/*Bloco da imagem de risco*/
+.bloco-risco-img{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Imagem de risco zero*/
+.risco-img{
+    width: calc(var(--wid100) / var(--pA) / var(--pA ));
+}
+
+/*Conteúdo de risco*/
+.bloco-risco{
+    padding: var(--espaco) 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*Título da Área de risco*/
+.titulo-risco{
+    padding:var(--espaco);
+    width: calc(var(--wid100) / var(--pA));
+    font-size: var(--maiorTexto);
+    text-align: center;
+    color:var(--cor3);
+    white-space: nowrap;
+}
+
+/*Parágrafo contendo cada risco*/
+.risco{
+    padding: var(--espacoParagrafo);
+    width: calc(var(--wid100) / var(--pA));
+    font-size: var(--paragrafo);
+    color:var(--cor2);
+    font-weight: 100; 
+    text-align: center;  
+}
+
+/*Área do segredo*/
+.area-foco-cta{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: var(--cor9);
+    justify-content: center;
+}
+
+/*Conteúdo de segredos*/
+.bloco-foco-cta{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*Bloco da imagem de risco*/
+.bloco-foco-cta-img{
+    padding: var(--espaco) 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Imagem de risco zero*/
+.img-foco-cta{
+    padding: var(--espaco) 0 0 0;
+    width: calc(var(--wid100) * var(--pAd2));
+}
+
+/*Parágrafo contendo cada segredo*/
+.foco-cta{
+    padding: var(--espacoParagrafo);
+    width: calc(var(--wid100) / var(--pA));
+    font-size: var(--medioTexto);
+    color:var(--cor1);
+    text-align: center;
+}
+
+/*Área do botão de compra isolada*/
+.area-botao-comprar2{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor9);
+    padding: var(--espacoParagrafo);
+}
+
+/*Compra segura*/
+.compra-segura{
+    width: calc(var(--wid100) / var(--pA) / var(--pA) / var(--pA));
+}
+
+/*Rodapé do site*/
+footer{
+    background-color: var(--cor6);
+    color: var(--cor2);
+    text-align: center;
+    padding: var(--paragrafo);
+}
