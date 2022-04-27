@@ -1,0 +1,884 @@
+:root{
+    --cor1: #0E2139;
+    --cor2: white;
+    --cor3: #f6da29;
+    --cor4: #24FF00;
+    --cor5: #db531a;
+    --cor6: black;
+    --cor7: #FA0000;
+    --cor8: #f84444;
+    --pA: 1.618;
+    --pAd2: calc(var(--pA) / 2);
+    --wid100: 100%;
+    --espaco: 17px;
+    --espacoParagrafo: var(--espaco) 0;
+    --espacoNeg: -25px;
+    --maiorTexto: 26px;
+    --medioTexto: calc(var(--maiorTexto) * var(--pAd2));
+    --paragrafo: 17px;
+    --elePos: 0 calc(-69px / var(--pA));
+    --bordas: 100%;
+    --vetor: 100px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-image: url('../img/bg/noise-dust.jpg');
+}
+
+/*Animação de cima para baixo*/
+@keyframes cimaParaBaixo {
+    0%{
+        position: relative;
+        top: -200px;
+    }
+
+    100%{
+        position: relative;
+        top: 0;
+    }
+}
+
+/*Cabeçalho*/
+header{
+    width: var(--wid100);
+    transition: 2s;
+    animation: cimaParaBaixo 1s;
+}
+
+/*Bloco da Promessa*/
+.bloco-promessa{
+    padding: var(--espaco) 0;
+    text-align: center;
+    background-color: var(--cor1);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+/*Promessa do produto*/
+.promessa{
+    width: calc(var(--wid100) / var(--pA));
+    font-size: var(--maiorTexto);
+    color:var(--cor2);
+}
+
+/*Animação texto destacado*/
+@keyframes destaque{
+    0%{
+        background-color: var(--cor3);
+        transition: 3.2s;
+    }
+
+    50%{
+        background-color: var(--cor5);
+        transition: 3.2s;
+    }
+
+    100%{
+        background-color: var(--cor3);
+        transition: 3.2s;
+    }
+}
+
+/*Texto destacado da Promessa*/
+.promessa b{
+    color: var(--cor1);
+    animation: destaque 3.2s infinite;
+}
+
+/*Formas geométricas divisoras de seções da página*/
+.elemento-ilustrativo-01{
+    width: var(--wid100);
+    height: var(--espaco);
+    border-bottom-left-radius: var(--bordas);
+    border-bottom-right-radius: var(--bordas);
+    background-color: var(--cor1);
+}
+
+/*Demonstração do ebook + CTA*/
+.ebook-copy-para-boletos{
+    padding: var(--espaco) 0;
+    width: var(--wid100);
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Animação da esquerda para direita*/
+@keyframes esqParaDireita {
+    0%{
+        position: relative;
+        opacity: 0;
+        left:-200px;
+    }
+
+    100%{
+        position: relative;
+        opacity: 1;
+        left:0;
+    }
+}
+
+/*Bloco do ebook principal*/
+.bloco-ebook{
+    width: var(--wid100);
+    height:auto;
+    padding: var(--espaco) 0;
+    transition: 0.2s;
+    animation: esqParaDireita 2.5s;
+}
+
+/*Imagem do ebook principal*/
+.mockup-ebook{
+    width: calc(var(--wid100) / var(--pA) / var(--pA));
+    height: auto;   
+}
+
+/*Animação do botão de compra*/
+@keyframes botao-crescente {
+    
+    0%{
+        scale: var(--wid100);
+        transition: 1s;
+    }
+
+    50%{
+        scale: calc(var(--wid100)* var(--pAd2));
+        transition: 1s;
+    }
+
+    0%{
+        scale: var(--wid100);
+        transition: 1s;
+    }
+}
+
+/*Bloco de botão de compra*/
+.bloco-botao-comprar{
+    transition: 1s;
+}
+
+/*Botão de compra com mouse em cima*/
+.botao-comprar:hover{
+    animation: botao-crescente 5.5s infinite;
+}
+
+/*Botão de compra da página*/
+.botao-comprar{
+    cursor: pointer;
+    width: calc(var(--wid100) / var(--pA) / var(--pA));
+    margin: var(--espaco) 0;
+    padding: var(--espaco) 0;
+    border:none;
+    color: var(--cor2);
+    background-color: var(--cor5);
+    font-size: var(--medioTexto);
+    font-weight: bold;
+    border-radius: var(--espaco);
+}
+
+/*Bloco de Aviso da promessa*/
+.bloco-aviso-promessa{
+    width: var(--wid100);
+    height:auto;
+    padding: var(--espaco) 0;
+    display: flex;
+    flex-direction: row;
+    transition: 0.2s;
+    justify-content: center;
+}
+
+/*Aviso da promessa*/
+.aviso-promessa{
+    width: calc(var(--wid100) / var(--pA));
+    font-size: var(--maiorTexto);
+    color:var(--cor1);
+}
+
+.bloco-setas{
+    margin: calc(var(--espaco) * var(--pA) * var(--pA));
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+/*Animação opacidade de cima para baixo*/
+@keyframes opa-cima-baixo {
+    0%{
+        position: relative;
+        opacity: 0;
+        fill-opacity: initial;
+        top: 0;
+        transition: 1s;
+    }
+
+    50%{
+        position: relative;
+        top: calc(30px * var(--pA));
+        transition: 1s;
+        opacity: 1;
+        fill-opacity: inherit;
+    }
+
+    100%{
+        position: relative;
+        opacity: 0;
+        fill-opacity: initial;
+        top: 0;
+        transition: 1s;
+    }
+}
+
+/*Setas*/
+.setas{
+    width: var(--vetor);
+    animation: opa-cima-baixo 4.5s infinite;
+}
+
+/*Área de objeções*/
+.area-objecoes{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/*Triângulo de borda*/
+.triangulo{
+    width: 100%;
+    height: auto;
+    margin-top: var(--espacoNeg);
+    margin-bottom: -5px;
+}
+
+/*Conteúdo de objeções*/
+.bloco-objecoes{
+    padding-top: calc(var(--espaco) * var(--pAd2));
+    padding-bottom: calc(var(--espaco) * var(--pAd2) + 86px);
+    background-color: var(--cor2);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*Título da Área de Objeções*/
+.objecoes-pergunta{
+    padding:var(--espaco);
+    width: calc(var(--wid100) / var(--pA));
+    font-size: var(--maiorTexto);
+    color:var(--cor1);
+    text-align: center;
+}
+
+/*Fonte leve no texto do título*/
+.objecoes-pergunta-lighter{
+    font-weight:lighter;
+}
+
+/*Parágrafo contendo cada objeção*/
+.objecao{
+    padding: var(--espacoParagrafo);
+    width: calc(var(--wid100) / var(--pA));
+    font-size: var(--paragrafo);
+    color:var(--cor1);
+}
+
+/*Pergunta destacada pela própria Alanis*/
+.pergunta-destacada{
+    background-color: var(--cor1);
+    color:var(--cor3);
+}
+
+/*Objeto rasgado separador*/
+.papel-rasgado{
+    width: 100%;
+    height: auto;
+    margin-top: var(--espacoNeg);
+    margin-top:-84px;
+    margin-bottom: -5px;
+}
+
+/*Área de Soluções*/
+.area-solucao{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/*Conteúdo de soluções*/
+.bloco-solucoes{
+    padding-top: calc(var(--espaco) * var(--pAd2));
+    padding-bottom: 110px;
+    background-color: var(--cor6);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*Título da Área de soluções*/
+.solucao-titulo{
+    padding:var(--espaco);
+    width: calc(var(--wid100) / var(--pA));
+    font-size: var(--maiorTexto);
+    color:var(--cor2);
+    text-align: center;
+}
+
+/*Fonte verde no Título*/
+.solucao-verde{
+    color:var(--cor4);
+}
+
+/*Alerta vermelho*/
+@keyframes alerta-verm {
+    0%, 100%{
+        opacity: 0.25;
+        color:var(--cor8);
+        transition: 0.75s;
+    }
+
+    15%{
+        opacity:1;
+        color:var(--cor7);
+        transition: 0.75s;
+    }
+}
+
+/*Fonte vermelha no Título*/
+.solucao-vermelha{
+    color:var(--cor7);
+    animation: alerta-verm 1.5s infinite;
+}
+
+/*Parágrafo contendo cada Solucão*/
+.solucao{
+    padding: var(--espacoParagrafo);
+    width: calc(var(--wid100) / var(--pA));
+    font-size: var(--paragrafo);
+    color:var(--cor2);
+}
+
+/*Fundo vermelho piscante*/
+@keyframes bg-piscante {
+    0%, 100%{
+        color:var(--cor2);
+        opacity: 0.25;
+        background-color:var(--cor8);
+        transition: 0.75s;
+    }
+
+    15%{
+        color:var(--cor2);
+        opacity: 1;
+        background-color:var(--cor7);
+        transition: 0.75s;
+    }
+}
+
+/*Pergunta destacada pela própria Alanis*/
+.pergunta-solucao{
+    background-color: var(--cor7);
+    font-size: var(--maiorTexto);
+    animation: bg-piscante 1.5s infinite;
+}
+
+/*Print dos boletos expirados*/
+.boletos-expirados-desktop{
+    width: calc(var(--wid100) / var(--pA));
+    margin: var(--espaco) 0;
+    text-align: center;
+}
+
+/*Fonte com fundo vermelho*/
+.solucao-vermelha-paragrafo{
+    font-size: var(--maiorTexto);
+    animation: alerta-verm 1.5s infinite;
+}
+
+/*Triângulo de borda*/
+.triangulo2{
+    width: 100%;
+    height: auto;
+    margin-top: -97px;
+    margin-bottom: -1px;
+}
+
+/*Área do primeiro CTA*/
+.area-primeiro-cta{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: calc(var(--espaco) / var(--pA));
+    background-color: var(--cor2);
+    text-align: center;
+}
+
+/*Bloco de título do Primeiro CTA*/
+.bloco-titulo-cta{
+    padding: calc(var(--espaco) * var(--pAd2));
+    background-color: var(--cor2);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*Retângulo piscando*/
+@keyframes retângulo-piscando {
+    
+    0%, 100% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: var(--cor4);
+    }
+}
+
+/*Título do CTA*/
+.titulo-cta{
+    padding:var(--espaco);
+    width: calc(var(--wid100) / var(--pA));
+    font-size: var(--maiorTexto);
+    color:var(--cor1);
+    text-align: center;
+    border-width: 4px;
+    border-style: dashed;
+    animation: retângulo-piscando 2.5s infinite;
+}
+
+/*Área do segredo*/
+.area-segredo{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/*Símbolo flutuante do WhatsApp superior*/
+.whats01{
+    position: absolute;
+    justify-content: center;
+    left: 25px;
+    width: 200px;
+    background-color: var(--cor2);
+}
+
+/*Símbolo flutuante do WhatsApp superior*/
+.whats02{
+    position: absolute;
+    justify-content: center;
+    padding-top:500px;
+    right: 1px;
+    width: 250px;
+}
+
+/*Conteúdo de segredos*/
+.bloco-segredo{
+    padding: calc(var(--espaco) * var(--pAd2));
+    background-color: var(--cor2);
+    background-image: url('../img/bg/whatsApp-simbol.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*Título da Área de segredo*/
+.titulo-segredo{
+    padding:var(--espaco);
+    width: calc(var(--wid100) / var(--pA));
+    font-size: var(--maiorTexto);
+    color:var(--cor1);
+    text-align: center;
+}
+
+/*Parágrafo contendo cada segredo*/
+.segredo{
+    padding: var(--espacoParagrafo);
+    width: calc(var(--wid100) / var(--pA));
+    font-size: var(--paragrafo);
+    color:var(--cor1);
+    font-weight: 100;   
+}
+
+/*Parágrafo de segredo em negrito*/
+.segredo-bold{
+    font-weight: bold !important; 
+}
+
+/*Área sobre o produto*/
+.sobre-produto{
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    padding: calc(var(--espaco) * var(--pAd2));
+    justify-content: center;
+}
+
+/*Título da área sobre o produto*/
+.titulo-sobre-produto{
+    width: var(--wid100);
+    padding:var(--espaco) 0;
+    font-size: var(--maiorTexto);
+    color:var(--cor1);
+    text-align: center;
+}
+
+/*Bloco de cada item do produto*/
+.bloco-sobre-produto{
+    width: calc(var(--wid100) / 4);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: auto;
+    background-color: var(--cor2);
+    align-items: center;
+    padding-bottom: calc(var(--espaco) * var(--pAd2) *2);
+    box-shadow: 1px 1px 45px 1px rgba(0, 0, 0, 0.179);
+}
+
+/*Imagem sobre cada item do produto*/
+.sobre-produto-svg{
+    width: 150px;
+    padding: calc(var(--espaco) * var(--pAd2) *2) 0;
+}
+
+/*Nome de cada item do produto*/
+.nome-sobre-produto{
+    padding:var(--espaco);
+    font-size: var(--medioTexto);
+    color:var(--cor1);
+    text-align: center;
+}
+
+/*Descrição de cada item do produto*/
+.desc-bonus{
+    padding: var(--espaco);
+    font-size: var(--paragrafo);
+    color:var(--cor1);
+    font-weight: 100;   
+    text-align: center;
+}
+
+/*Spoiler do que vai encontrar no produto*/
+.spoiler-sobre-produto{
+    padding: var(--espacoParagrafo);
+    font-size: var(--paragrafo);
+    color:var(--cor1);
+    font-weight: 100;   
+    text-align: center;
+}
+
+/*Área de Bonus*/
+.area-bonus{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/*Conteúdo de Bonus*/
+.bloco-bonus{
+    padding: calc(var(--espaco) * var(--pAd2));
+    background-color: var(--cor2);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*Título da Área de Bonus*/
+.titulo-bonus{
+    padding:var(--espaco);
+    width: calc(var(--wid100) / var(--pA));
+    font-size: var(--maiorTexto);
+    color:var(--cor1);
+    text-align: center;
+}
+
+/*Parágrafo sobre os bônus*/
+.bonus-paragrafo{
+    padding: var(--espaco) 0 0 0;
+    width: calc(var(--wid100) / var(--pA));
+    font-size: var(--paragrafo);
+    color:var(--cor1);
+    font-weight: 100;
+}
+
+/*Demonstração do ebook*/
+.ebook-copy-para-boletos-no-email{
+    padding: var(--espaco) 0;
+    width: calc(var(--wid100));
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Bloco do ebook*/
+.bloco-ebook-bonus{
+    width: var(--wid100);
+    height:auto;
+    padding: var(--espaco) 0;
+    transition: 0.2s;
+    animation: esqParaDireita 2.5s;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/*Imagem do ebook bonus*/
+.mockup-ebook-bonus{
+    width: calc(var(--wid100) / var(--pA) / var(--pA) / var(--pA));
+    height: auto;   
+}
+
+/*Bloco de detalhes sobre o item de bonus*/
+.detalhes-bonus{
+    width: calc(var(--wid100) / var(--pA) / var(--pA));
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Título do bonus*/
+.titulo-bonus{
+    font-size: var(--maiorTexto);
+}
+
+/*Da esquerda para a direita*/
+@keyframes escrevendo {
+    from { width: 0 }
+    to { width: 100%; transition: 1s}
+}
+
+/*Parágrafo bonus destacado*/
+.bonus-paragrafo-destacado{
+    color:var(--cor4);
+    font-weight:bold !important;
+    font-size: var(--maiorTexto);
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    overflow: hidden;
+    letter-spacing: 0.15em;
+    margin: 0 auto;
+    animation: escrevendo 3.5s steps(40, end) infinite;
+}
+
+/*Área do hora de agir*/
+.hora-de-agir{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/*Conteúdo de segredos*/
+.bloco-hora-de-agir{
+    padding: calc(var(--espaco) * var(--pAd2)) 0;
+    background-color: var(--cor2);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Título da Área de segredo*/
+.titulo-hora-de-agir{
+    padding:var(--espaco);
+    width: calc(var(--wid100) / var(--pA));
+    font-size: var(--maiorTexto);
+    color:var(--cor1);
+    text-align: center;
+}
+
+/*Parágrafo contendo cada segredo*/
+.paragrafo-hora-de-agir{
+    padding: var(--espacoParagrafo);
+    width: calc(var(--wid100) / var(--pA));
+    font-size: var(--paragrafo);
+    color:var(--cor1);
+    font-weight: 100;
+    text-align: left !important;
+}
+
+/*Parágrafo de segredo em negrito*/
+.paragrafo-hora-de-agir-bold{
+    font-weight: bold !important; 
+}
+
+/*Animação de fonte expandindo*/
+@keyframes fonte-expandindo {
+    0%, 100% {
+        color: var(--cor8);
+        scale: 100%;
+    }
+
+    50% {
+        color: var(--cor7);
+        scale: 150%;
+        transition: 2.5s;
+    }
+}
+
+/*Valor Total para Agir*/
+.hora-de-agir-valor{
+    padding: var(--espacoParagrafo);
+    font-size: var(--maiorTexto);
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fonte-expandindo 5s infinite;
+}
+
+/*Área do Acabando com a dor*/
+.acabando-com-a-dor{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/*Bloco do Acabando com a dor*/
+.bloco-acabando-com-a-dor{
+    padding: calc(var(--espaco) * var(--pAd2)) 0;
+    background-color: var(--cor2);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Título de Acabando com a dor*/
+.titulo-acabando-com-a-dor{
+    padding:var(--espaco);
+    width: calc(var(--wid100) / var(--pA));
+    font-size: var(--maiorTexto);
+    color:var(--cor1);
+    text-align: center;
+}
+
+/*Parágrafo contendo cada dor*/
+.paragrafo-acabando-com-a-dor{
+    padding: var(--espacoParagrafo);
+    width: calc(var(--wid100) / var(--pA));
+    font-size: var(--paragrafo);
+    color:var(--cor1);
+    font-weight: 100;
+    text-align: left !important;
+}
+
+/**/
+@keyframes underline {
+    0%,100%{
+        border-bottom: 4px solid transparent;
+    }
+
+    50%{
+        border-bottom: 4px solid var(--cor1);
+    }
+}
+
+/*Acabando com a dor parágrafo em negrito*/
+.paragrafo-acabando-com-a-dor-bold{
+    font-weight: bold !important;
+    font-size: var(--maiorTexto);
+    animation: underline 3.5s steps(300) forwards infinite;
+}
+
+/*Bloco dos ebooks*/
+.bloco-todos-ebooks{
+    width: var(--wid100);
+    height:auto;
+    padding: var(--espaco) 0;
+    transition: 0.2s;
+    animation: esqParaDireita 2.5s;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/*Imagem dos ebooks*/
+.mockup-todos-ebooks{
+    width: calc(var(--wid100) / var(--pA) / var(--pA) / var(--pA));
+    height: auto;
+}
+
+/*Sinal de + como divisor dos ebooks*/
+.divisor-ebooks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: var(--maiorTexto);
+}
+
+
+
+
+
+
+
+/*Revelação do preço total do produto*/
+.precificacao{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+/*Introdução ao preço do produto*/
+.intro-preco-do-produto{
+    font-size: var(--maiorTexto);
+    padding: var(--espaco) 0;
+}
+
+/*Preço total do produto à vista*/
+.preco-produto{
+    font-size: calc(var(--maiorTexto) * var(--pA) * var(--pA) * var(--pA));
+    padding: var(--espaco) 0;
+    animation: botao-crescente 5.5s infinite;
+}
+
+/*Preço parcelado*/
+.preco-parc{
+    font-size: var(--medioTexto);
+    font-weight: 100;
+    padding-bottom: var(--espaco);
+}
+
+
+
+
+
+
+/*Área do botão de compra*/
+.area-botao-comprar{
+    padding: var(--espaco) 0;
+    width: var(--wid100);
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor2);
+}
+
+
