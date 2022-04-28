@@ -680,24 +680,23 @@ header{
 /*Bloco do ebook*/
 .bloco-ebook-bonus{
     width: var(--wid100);
-    height:auto;
     padding: var(--espaco) 0;
     transition: 0.2s;
     animation: esqParaDireita 2.5s;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 /*Imagem do ebook bonus*/
 .mockup-ebook-bonus{
-    width: calc(var(--wid100) / var(--pA) / var(--pA) / var(--pA));
-    height: auto;
+    width: 35%;
 }
 
 /*Bloco de detalhes sobre o item de bonus*/
 .detalhes-bonus{
-    width: calc(var(--wid100) / var(--pA) / var(--pA));
+    width: 35%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -865,7 +864,7 @@ header{
 
 /*Imagem dos ebooks*/
 .mockup-todos-ebooks{
-    width: calc(var(--wid100) / var(--pA) / var(--pA) / var(--pA));
+    width: 30.60%;
     height: auto;
     align-items: center;
 }
@@ -1112,40 +1111,109 @@ footer{
 
 @media screen and (max-width: 939px){
 
-    
+    /*Bloco de cada item do produto*/
+    .bloco-sobre-produto{
+        width: calc(var(--wid100) / 3);
+        margin: 0.73%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: auto;
+        background-color: var(--cor2);
+        align-items: center;
+        padding-bottom: calc(var(--espaco) * var(--pAd2) *2);
+        box-shadow: 1px 1px 45px 1px rgba(0, 0, 0, 0.179);
+    }    
 
+    /*Imagem do ebook bonus*/
+    .mockup-ebook-bonus{
+        width: 45%;
+    }
 
+    /*Imagem dos ebooks*/
+    .mockup-todos-ebooks{
+        width: 35.60%;
+        height: auto;
+        align-items: center;
+    }
 
-
+    /*Bloco de detalhes sobre o item de bonus*/
+    .detalhes-bonus{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
 
 }
 
+@media screen and (max-width:737px) {
+    
+    /*Imagem do ebook bonus*/
+    .mockup-ebook-bonus{
+        width: 50%;
+    }
 
+    /*Bloco de detalhes sobre o item de bonus*/
+    .detalhes-bonus{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
 
+    /*Imagem dos ebooks*/
+    .mockup-todos-ebooks{
+        width: 40.60%;
+        height: auto;
+        align-items: center;
+    }
+}
 
+@media screen and (max-width:645px){
+    
+    /*Imagem do ebook bonus*/
+    .mockup-ebook-bonus{
+        width: 51%;
+    }
 
+    /*Bloco de detalhes sobre o item de bonus*/
+    .detalhes-bonus{
+        width: 49%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
 
+    /*Imagem dos ebooks*/
+    .mockup-todos-ebooks{
+        width: 50.60%;
+        height: auto;
+        align-items: center;
+    }
+}
 
+@media screen and (max-width:617px){
 
+    /*Imagem do ebook bonus*/
+    .mockup-ebook-bonus{
+        width: calc(var(--wid100) / var(--pA));
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    /*Bloco de detalhes sobre o item de bonus*/
+    .detalhes-bonus{
+        width: var(--wid100);
+    }
+}
 
 /*Celulares*/
-@media screen and (max-width: 554px) {
+@media screen and (max-width: 596px) {
     
     :root{
         --pA: 1.618;
@@ -1177,7 +1245,7 @@ footer{
     /*Botão flutuante do WhatsApp*/
     .botao-flutuante-whatsapp{
         position: fixed;
-        width: calc(var(--wid100) / var(--pA) / var(--pA) / var(--pA) * var(--pAd2));
+        width: 25.46%;
         animation: giro-whats 25s steps(600) infinite, bot-whats 5.5s steps(30) infinite;
     }
 
